@@ -60,3 +60,5 @@ setopt hist_find_no_dups
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+export PATH="$HOME/.local/bin:$PATH"

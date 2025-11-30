@@ -1,144 +1,103 @@
+@import url("colors.css");
+
 * {
-	border: none;
-	border-radius: 10;
-	font-family: "JetBrainsMono Nerd Font Mono", "Symbols Nerd Font", "JetBrainsMono Nerd Font";
-    	font-size: 15px;
-    	min-height: 10px;
-	background-color: transparent;
-	margin-bottom: 3px;
+  border: none;
+  border-radius: 50px;
+  font-family: "JetBrainsMono Nerd Font Mono", "Symbols Nerd Font",
+    "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  font-weight: 700;
+  min-height: 0;
+  background-color: transparent;
+  margin-bottom: 3px;
 }
 
 #window {
-	margin-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: transparent;
-	background: transparent;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: transparent;
+  background: @bg-soft;
 }
 
 #window#waybar {
-	background: transparent;
+  background: @bg-soft;
 }
 
 #window#waybar.hidden {
-	opacity: 0.2;
+  opacity: 0.2;
 }
 
-#cpu {
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
-
-}
-	
-#clock {
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
+#tray menu {
+  border-radius: 10px;
+  transition: none;
+  color: @fg;
+  background: @accent;
 }
 
-#memory {
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
-}
-
-
-#network {
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
-}
-
-
-#pulseaudio {
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
-}
-
-
+#tray,
+#cpu,
+#clock,
+#memory,
+#network,
+#pulseaudio,
 #language {
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #161320;
-	background: #F8BD96;
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+  transition: none;
+  /* color: @accent-strong;
+  background: @accent-dark; */
+  color: @accent;
+  background: @on_secondary;
 }
 
+/* Workspaces */
 #workspaces {
-	margin: 6px 6px 0 6px;
+  margin: 6px 6px 0 6px;
 }
 
 #workspaces button {
-	padding: 8px 15px 2px 15px;
-	background-color: #F8BD96;
-	border-radius: 0;
-	border-top: 2px solid #F8BD96;
-	border-bottom: 2px solid #F8BD96;
+  padding: 8px 15px 2px 15px;
+  background-color: @on_secondary; /* динамическая переменная */
+  border-radius: 0;
+  color: @accent;
+  border-top: 2px solid @accent-light;
+  border-bottom: 2px solid @accent-light;
 }
 
-#workspaces button.active, #workspaces button.focused {
-	opacity: 0.85;
-	border-top: 2px solid #161320;
-  border-bottom: 2px solid #161320;
+#workspaces button.active,
+#workspaces button.focused {
+  opacity: 0.85;
+  border-top: 2px solid @fg;
+  border-bottom: 2px solid @fg;
 }
 
 #workspaces button:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-left: 2px solid #F8BD96;
+  border-left: 2px solid @accent-light;
 }
 
-/* Последний workspace */
 #workspaces button:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-right: 2px solid #F8BD96;
+  border-right: 2px solid @accent-light;
 }
 
-
-#workspaces button.active:first-child, #workspaces button.focused:first-child {
-  border-left: 2px solid #161320; 
+#workspaces button.active:first-child,
+#workspaces button.focused:first-child {
+  border-left: 2px solid @fg;
 }
 
-
-#workspaces button.active:last-child, #workspaces button.focused:last-child {
-  border-right: 2px solid #161320; 
+#workspaces button.active:last-child,
+#workspaces button.focused:last-child {
+  border-right: 2px solid @fg;
 }
