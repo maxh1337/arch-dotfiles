@@ -11,7 +11,9 @@
     },
     "font": "JetBrains Nerd Font 10, Symbols Nerd Font Mono 10",
     "hyprland/language": {
-        "format": "<span font='13'>\uf0ac</span> {long} {variant}"
+        "format": "<span font='13'>\uf0ac</span> {}",
+        "format-en": "EN",
+        "format-ru": "RU"
     },
     "hyprland/workspaces": {
         "all-outputs": true,
@@ -49,9 +51,9 @@
         "tray"
     ],
     "modules-right": [
-        "hyprland/language",
         "network",
         "pulseaudio",
+        "hyprland/language",
         "clock"
     ],
     "network": {
@@ -72,7 +74,7 @@
         "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}"
     },
     "pulseaudio": {
-        "format": "<span font='14'></span> {volume: >3}%",
+        "format": "<span font='12'></span> {volume: >3}%",
         "on-click": "pavucontrol",
         "tooltip": true
     },
